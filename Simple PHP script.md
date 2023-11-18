@@ -1,8 +1,7 @@
-![image](https://github.com/Theincognitomode/What-the-shell/assets/73027020/9ff0539a-c395-4cab-88e4-6fdb8372e845)First lets start the machine form the **TASK 15** and see what is has to offer to use..
+Now lets start the machine form the **TASK 15** and see what is has to offer to use..
 
 **NOTE: As this is a THM task so there wont be any firewall blocking in real life scenarios it wont be this easy for sure!!**
 # USING SIMPLE PHP SCRIPT
-
 
 ![image](https://github.com/Theincognitomode/What-the-shell/assets/73027020/47f2952e-a5fc-47e0-9c2c-2c2e9ec3453c)
 
@@ -35,4 +34,24 @@ Now convert this in url form and then modify the url
 
 There we goo!! 
 
-Now read the TASK 13 
+Now read the Questions of TASK 13 
+
+**The webserver is running with SYSTEM privileges. Create a new user and add it to the "administrators" group, then login over RDP or WinRM.**
+
+Lets do this simple commands:
+
+
+        net user <uname> <password> /add
+
+Now lets add the user in the administrator group:
+
+        net localgrouup administrators <uname> /add
+
+After completing this proccess lets try to access it using the xfreerdp the command for that will look like this:
+
+        xfreerdp /dynamic-resolution +clipboard /cert:ignore /v:10.10.109.254 /u:abc /p:'abc123'
+
+![image](https://github.com/Theincognitomode/What-the-shell/assets/73027020/2ca970b9-bf12-4576-bb96-0317f8bba194)
+
+
+Cool we are connected now!!
